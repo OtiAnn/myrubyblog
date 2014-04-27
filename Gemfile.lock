@@ -51,6 +51,7 @@ GEM
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.9.2)
+    pg (0.17.1)
     pg (0.17.1-x86-mingw32)
     polyglot (0.3.4)
     protected_attributes (1.0.7)
@@ -106,6 +107,7 @@ GEM
       json (>= 1.8.0)
 
 PLATFORMS
+  ruby
   x86-mingw32
 
 DEPENDENCIES

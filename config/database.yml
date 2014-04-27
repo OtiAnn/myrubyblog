@@ -7,7 +7,7 @@ development:
   adapter: postgresql
   database: myrubyblog
   username: postgres
-  password: chen780330
+  password: chen470325
   pool: 5
   timeout: 5000
 
@@ -18,7 +18,7 @@ test:
   adapter: postgresql
   database: myrubyblog
   username: postgres
-  password: chen780330
+  password: chen470325
   pool: 5
   timeout: 5000
 
@@ -26,6 +26,6 @@ production:
   adapter: postgresql
   database: myrubyblog
   username: postgres
-  password: chen780330
+  password: chen470325
   pool: 5
   timeout: 5000

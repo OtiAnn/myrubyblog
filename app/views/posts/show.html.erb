@@ -2,5 +2,5 @@
 <small><%= @post.created_at.strftime("%b %d. %Y") %></small>
 <p><%= @post.body %></p>
 
-<%= link_to "Edit Post", edit_post_path %> | <%= link_to "Delete", @post, :confirm => "Are you sure you want to delete?", :method => :delete %><br />
-<%= link_to "Back", posts_path %>
+<p><%= link_to "<Edit Post>", edit_post_path %> | <%= link_to "<Delete>", @post, :confirm => "Are you sure you want to delete?", :method => :delete %></p><br />
+<p><%= link_to "<Back>", posts_path %></p>
