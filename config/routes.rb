@@ -1,6 +1,6 @@
 Myrubyblog::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
-
+     
   resources :categories
 
   get "categories/index"
@@ -10,6 +10,7 @@ Myrubyblog::Application.routes.draw do
   root "home#index"
     resources :posts
     resources :categories
+  ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -64,5 +65,6 @@ Myrubyblog::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-    ActiveAdmin.routes(self)
+   
 end
+
