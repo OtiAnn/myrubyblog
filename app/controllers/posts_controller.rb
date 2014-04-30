@@ -11,7 +11,7 @@ class PostsController < ApplicationController
 	def create
 		@post = Post.new(params[:post])
 		if @post.save
-			redirect_to posts_path, :notice => "Your post has been saved!"
+			redirect_to posts_path, :notice => "您的文章儲存成功！"
 		else
 			render "new"
 		end
@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 	def update
 		@post = Post.find(params[:id])
 		if @post.update_attributes(params[:post])
-			redirect_to post_path, :notice => "Your post has been updated!"
+			redirect_to post_path, :notice => "您的文章更新成功！"
 		else
 			render "edit"
 		end

@@ -11,7 +11,7 @@
  *= require_self
  *= require_tree .
  */
-body {
+/*body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -29,4 +29,4 @@ a:hover{
 	text-decoration: none;
 	background-color: rgba(38, 111, 103, 0.5);
 	border-radius: 0.1em;
-}
+}*/
