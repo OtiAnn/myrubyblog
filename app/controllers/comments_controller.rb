@@ -1,6 +1,5 @@
 class CommentsController < InheritedResources::Base
 	def create
-		# @comment = Comment.new(comment_params)
 		@comment = Comment.new(comment_params)
 		if @comment.save
 			flash[:notice] = '您的回應儲存成功！'
