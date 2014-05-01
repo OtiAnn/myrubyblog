@@ -1,4 +1,4 @@
-<h1>Listing categories</h1>
+<div class="post"><h2 class="title">Listing categories</h2>
 <ul>
     <% @categories.each do |category| %>
         <li><%= link_to category.name, category %></li>
@@ -6,3 +6,4 @@
 </ul>
 
 <p><%= link_to "<Back>", posts_path %></p>
+</div>
