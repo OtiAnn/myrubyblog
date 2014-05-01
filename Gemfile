@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
-
+gem 'ruby'
 # Use sqlite3 as the database for Active Record
 
 
@@ -49,4 +49,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-# gem 'protected_attributes', '~> 1.0.7'
+gem 'protected_attributes', '~> 1.0.7'
