@@ -1,4 +1,6 @@
 Myrubyblog::Application.routes.draw do
+  resources :comments
+
   get "pages/about"
   get "pages/contact"
   get "pages/resources"
