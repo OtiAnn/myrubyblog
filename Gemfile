@@ -10,6 +10,7 @@ gem 'pry'
 
 # gem 'sqlite3'
 gem 'pg'
+gem 'rails_12factor'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem "ransack"
 # Use SCSS for stylesheets
