@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: a460d8d2ab37820c6ac377f4a75fe90b203520d0
+  revision: a25c9231715a4124bd7a303f29feeb381ec88956
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0)
@@ -175,6 +175,7 @@ DEPENDENCIES
   pg
   protected_attributes (~> 1.0.7)
   rails (= 4.0.4)
+  ransack
   sass-rails (~> 4.0.2)
   sdoc
   turbolinks
