@@ -10,18 +10,14 @@ class PostsController < ApplicationController
 	end
 	
 	def create
-		@post = Post.new(params[:post])
+		@post = Post.new(post_params)
 		if @post.save
-			redirect_to posts_path, :notice => "您的文章儲存成功！"
+			flash[:success] = "您的文章儲存成功！"
+			redirect_to @post
 		else
 			render "new"
 		end
 	end
-	# private
-	# def post_params
-	# 	params.require(:post).permit(:title, :body, :category_id, :admin_user_id)
-	# end
-
 
 	def edit
 		@post = Post.find(params[:id])
@@ -48,4 +44,10 @@ class PostsController < ApplicationController
 		redirect_to posts_path
 
 	end
+
+	private
+	def post_params
+		params.require(:post).permit(:title, :body, :category_id, :admin_user_id)
+	end
+
 end

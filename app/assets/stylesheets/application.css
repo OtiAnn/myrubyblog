@@ -377,4 +377,7 @@ a:hover {
 	color: #847F7E;
 }
 
-form label{width:110px;display:inline-block;}
+form label{
+	width:110px;
+	display:inline-block;
+}
