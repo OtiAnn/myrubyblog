@@ -1,11 +1,19 @@
 <div class="post"><h2 class="title"><%= @post.title %></h2>
-<p><br />Category: <%= link_to @post.category.name, category_path(:id => @post.category.id) %><small>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.created_at.strftime("%b %d. %Y") %>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;<%= @post.admin_user.name %></small></p>
+<p><br />Category: <%= link_to @post.category.name, category_path(:id => @post.category.id) %>
+	<small>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+		<%= @post.created_at.strftime("%b %d. %Y") %>
+		&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+		<%= @post.admin_user.name %>
+	</small>
+	
+</p>
 
 <p><%= @post.body %></p><br />
 
 
 <!-- <p><%= link_to "<編輯文章>", edit_post_path %> | <%= link_to "<刪除文章>", @post, :confirm => "你確定要刪除文章嗎？", :method => :delete %></p><br /> -->
 
+Vote :<%= @post.votes.count %><%= button_to 'like', vote_post_path(@post), method: :post %>
 <p><%= link_to "回到文章列表", posts_path %></p>
 
 <%= render :partial => 'partials/comment', :collection => @post.comments %>
