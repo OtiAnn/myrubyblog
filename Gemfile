@@ -7,7 +7,8 @@ gem 'ruby'
 
 
 gem 'pry'
-
+gem 'carrierwave'
+gem 'mini_magick', '3.7.0'
 # gem 'sqlite3'
 gem 'pg'
 gem 'rails_12factor'

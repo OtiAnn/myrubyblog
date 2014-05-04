@@ -76,9 +76,11 @@ a:hover {
 	margin: 0;
 	padding: 0;
 	color: #000000;
+
 }
 
 #logo h1, #logo p {
+
 }
 
 #logo h1 {
@@ -90,6 +92,7 @@ a:hover {
 	font-size: 3.8em;
 	font-weight: bold;
 	color: #D43442;
+
 }
 
 #logo h1 a {
@@ -97,6 +100,7 @@ a:hover {
 }
 
 #logo h1 span {
+
 }
 
 #logo p {
@@ -112,6 +116,7 @@ a:hover {
 	background: none;
 	text-decoration: none;
 	color: #707070;
+
 }
 
 /* Search */
@@ -167,6 +172,7 @@ a:hover {
 	font-weight: normal;
 	color: #FFFFFF;
 	border: none;
+	-webkit-transition: background 0.3s;
 }
 
 #menu a:hover, #menu .current_page_item a {

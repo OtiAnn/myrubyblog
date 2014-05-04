@@ -6,6 +6,7 @@ ActiveAdmin.register Post do
     column :title
     column "Author", :admin_user
     column :category
+    column :picture
     column :created_at
     actions
   end

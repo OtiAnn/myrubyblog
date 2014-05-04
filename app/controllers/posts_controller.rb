@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 	def new
 		@post = Post.new
 		@category = Category.all
+		@user = AdminUser.all
 	end
 	
 	def create
@@ -24,7 +25,8 @@ class PostsController < ApplicationController
 	end
 	
 	def update
-		@post = Post.find(params[:id])
+		@post = Post.find(post_params)
+		@user = AdminUser.all
 		if @post.update_attributes(params[:post])
 			redirect_to post_path, :notice => "您的文章更新成功！"
 		else
@@ -52,7 +54,7 @@ class PostsController < ApplicationController
 
 	private
 	def post_params
-		params.require(:post).permit(:title, :body, :category_id, :admin_user_id)
+		params.require(:post).permit(:title, :body, :picture, :category_id, :admin_user_id)
 	end
 
 end

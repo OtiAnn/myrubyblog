@@ -9,6 +9,12 @@
 		<%= f.text_area :body %><br />
 	</p>
 	<p>
+		<%= f.file_field :picture %>
+	</p>
+	<p>
+		<%= f.select :admin_user_id, AdminUser.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
+	</p>
+	<p>
 		<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
 	</p>
 	<p>
