@@ -1,11 +1,16 @@
 <% @posts.each do |post| %>
 <div class="post">
 	<h2 class="title"><%= link_to post.title, post %> </h2>
-	<div class="entry"><p><%= post.body %></p></div>
+	<div class="entry">
+		<p><%= truncate(post.body, length: 100) %></p>
+		<!-- 切斷過長的文字 -->
+	</div>
 	<div class="byline">
 		<p class="meta"><%= post.created_at.strftime("%b %d. %Y") %> Posted by <%= post.admin_user.name %></p>
 		<p class="links"><%= link_to "Read More..", post %>
-			&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+			Comments :<%= post.comments.count %>
+			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 			Vote :<%= post.votes.count %>
 			<%= button_to '+1', vote_post_path(post), method: :post %>
 		</p>

@@ -1,5 +1,5 @@
 <div class="post">
-	<h2 class="title">Add New Post</h2>
+	<h2 class="title">新增文章</h2>
 	<div class="entry">
 	<%= form_for @post do |f| %>
 	
@@ -21,8 +21,8 @@
 		文章類別：<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
 	</p>
 	<p>
-		<%= f.submit "Add Post" %><br />
+		<%= f.submit "送出文章" %><br />
 	</p>
 	<% end %>
-	<p><%= link_to '回到文章列表', posts_path %></p></div>
+	<p class="links"><%= link_to '回到文章列表', posts_path %></p></div>
 </div>
