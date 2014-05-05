@@ -1,24 +1,28 @@
-<h1>Add New Post</h1>
-<%= form_for @post do |f| %>
+<div class="post">
+	<h2 class="title">Add New Post</h2>
+	<div class="entry">
+	<%= form_for @post do |f| %>
+	
 	<p>
-		<%= f.label :title %><br />
+		<%= f.label :title, '文章標題：' %><br />
 		<%= f.text_field :title %><br />
 	</p>
 	<p>
-		<%= f.label :body %><br />
+		<%= f.label :body, '文章內容：' %><br />
 		<%= f.text_area :body %><br />
 	</p>
 	<p>
-		<%= f.file_field :picture %>
+		上傳圖片：<%= f.file_field :picture %>
 	</p>
 	<p>
-		<%= f.select :admin_user_id, AdminUser.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
+		文章作者：<%= f.select :admin_user_id, AdminUser.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
 	</p>
 	<p>
-		<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
+		文章類別：<%= f.select :category_id, Category.all.collect {|x| [x.name, x.id]},{:include_blank => "Select One"} %><br />
 	</p>
 	<p>
 		<%= f.submit "Add Post" %><br />
 	</p>
-<% end %>
-<p><%= link_to '<Back>', posts_path %></p>
+	<% end %>
+	<p><%= link_to '回到文章列表', posts_path %></p></div>
+</div>
