@@ -1,9 +1,9 @@
-<div class="post"><h2 class="title">Listing categories</h2>
-<ul>
-    <% @categories.each do |category| %>
-        <li><%= link_to category.name, category %></li>
-    <% end %>
-</ul>
-
-<p class="links"><%= link_to "回到文章列表", posts_path %></p>
+<div class="post">
+	<h2 class="title">Listing categories</h2>
+	<div class="entry">
+	    <% @categories.each do |category| %>
+	        <p><%= link_to category.name, category %></p>
+	    <% end %>
+		<p class="links"><%= link_to "回到文章列表", posts_path %></p>
+	</div>
 </div>

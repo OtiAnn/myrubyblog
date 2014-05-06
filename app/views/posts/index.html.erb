@@ -7,7 +7,8 @@
 	</div>
 	<div class="byline">
 		<p class="meta"><%= post.created_at.strftime("%b %d. %Y") %> Posted by <%= post.admin_user.name %></p>
-		<p class="links"><%= link_to "Read More..", post %>
+		<p class="links">
+			<%= link_to "Read More..", post %>
 			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 			Comments :<%= post.comments.count %>
 			&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;

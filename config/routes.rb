@@ -1,4 +1,6 @@
 Myrubyblog::Application.routes.draw do
+  root "home#index"
+
   resources :comments
 
   get "pages/about"
@@ -12,7 +14,7 @@ Myrubyblog::Application.routes.draw do
   get "categories/edit"
   get "categories/new"
   get "categories/show"
-  root "home#index"
+
     resources :posts do
       member do
         post 'vote'
