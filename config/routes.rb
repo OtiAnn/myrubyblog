@@ -1,12 +1,12 @@
 Myrubyblog::Application.routes.draw do
+  devise_for :admin_users, ActiveAdmin::Devise.config
   root "home#index"
 
   resources :comments
 
   get "pages/about"
   get "pages/contact"
-  get "pages/resources"
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  get "pages/resources", ActiveAdmin::Devise.config
      
   resources :categories
 
