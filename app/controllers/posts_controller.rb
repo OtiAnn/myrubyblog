@@ -49,7 +49,8 @@ class PostsController < ApplicationController
 	def vote
 		@post = Post.find(params[:id])
 		@post.votes.create
-		redirect_to posts_path
+		redirect_to request.referer
+		#回到該頁面
 	end
 
 	private
